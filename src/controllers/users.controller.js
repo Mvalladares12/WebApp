@@ -18,7 +18,7 @@ const conn = await poolPromise;
       .input("email", sql.VarChar, email)
       .query("INSERT INTO users (name, email) VALUES (@name, @email)");
 
-    rres.send(`
+    res.send(`
   <h1>Registro Exitoso</h1>
   <p>El usuario ha sido guardado en la base de datos Azure SQL.</p>
   <a href="/users">Haga clic aquí para ver la lista de usuarios</a>
