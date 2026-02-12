@@ -33,8 +33,8 @@ import dotenv from "dotenv";
 dotenv.config();
 const app = express();
 
-app.use(helmet());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.json()); // Esta ya la debes tener
+app.use(express.urlencoded({ extended: true }));
 
 // Archivos estáticos
 app.use(express.static("/views"));
